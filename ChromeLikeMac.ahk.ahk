@@ -3,19 +3,19 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
+!]::
+	SendInput, ^{PgDn}
+Return
 
-!0::    ; Next window
-WinGetClass, ActiveClass, A
-WinSet, Bottom,, A
-WinActivate, ahk_class %ActiveClass%
-return
+![::
+	SendInput, ^{PgUp}
+Return
 
-!+`::    ; Next window
-WinGetClass, ActiveClass, A
-WinActivateBottom, ahk_class %ActiveClass%
-return
+!w::
+	SendInput, ^w
+Return
 
-!9::    ; Last window
-WinGetClass, ActiveClass, A
-WinActivateBottom, ahk_class %ActiveClass%
-return
+
+!l::
+	SendInput, ^l
+Return

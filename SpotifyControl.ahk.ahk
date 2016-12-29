@@ -4,20 +4,20 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; "CTL + ALT + LEFT" for previous 
-^+Left::Media_Prev
+!+Left::Media_Prev
 Return
 
 ; "CTL + ALT + RIGHT" for next 
-^+Right::Media_Next
+!+Right::Media_Next
 Return
 
 ; "CTL + ALT + UP" for pause
-^+Up::Media_Play_Pause
+!+Up::Media_Play_Pause
 Return
 
 ; "CTL + ALT + /" for starring current song
 
-^!/::
+!+/::
 spotify = ahk_class SpotifyMainWindow
 IfWinExist, %spotify%
 {
